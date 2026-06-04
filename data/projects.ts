@@ -23,7 +23,7 @@ export const projects: Project[] = [
   {
     name: "Project Three",
     description: "A machine learning model that classifies X with Y% accuracy.",
-    tech: ["Python", "PyTorch", "scikit-learn"],
+    tech: ["PyTorch", "scikit-learn", "Jupyter"],
     github: "https://github.com/username/project-three",
   },
 ]

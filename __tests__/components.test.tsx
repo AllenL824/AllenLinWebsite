@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react"
 import Hero from "@/components/Hero"
 import About from "@/components/About"
 import Experience from "@/components/Experience"
+import Projects from "@/components/Projects"
 
 describe("Hero", () => {
   it("renders name heading", () => {
@@ -40,5 +41,26 @@ describe("Experience", () => {
     render(<Experience />)
     expect(screen.getByText("Software Engineering Intern")).toBeInTheDocument()
     expect(screen.getByText("May 2025 – Aug 2025")).toBeInTheDocument()
+  })
+})
+
+describe("Projects", () => {
+  it("renders a card for each project", () => {
+    render(<Projects />)
+    expect(screen.getByText("Project One")).toBeInTheDocument()
+    expect(screen.getByText("Project Two")).toBeInTheDocument()
+    expect(screen.getByText("Project Three")).toBeInTheDocument()
+  })
+
+  it("renders GitHub links", () => {
+    render(<Projects />)
+    const githubLinks = screen.getAllByRole("link", { name: /github/i })
+    expect(githubLinks.length).toBeGreaterThan(0)
+  })
+
+  it("renders tech tags for each project", () => {
+    render(<Projects />)
+    expect(screen.getByText("React")).toBeInTheDocument()
+    expect(screen.getByText("Python")).toBeInTheDocument()
   })
 })
