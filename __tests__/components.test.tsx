@@ -4,6 +4,8 @@ import About from "@/components/About"
 import Experience from "@/components/Experience"
 import Projects from "@/components/Projects"
 import Skills from "@/components/Skills"
+import Education from "@/components/Education"
+import Contact from "@/components/Contact"
 
 describe("Hero", () => {
   it("renders name heading", () => {
@@ -79,5 +81,32 @@ describe("Skills", () => {
     expect(screen.getByText("TypeScript")).toBeInTheDocument()
     expect(screen.getByText("React")).toBeInTheDocument()
     expect(screen.getByText("Git")).toBeInTheDocument()
+  })
+})
+
+describe("Education", () => {
+  it("renders degree information", () => {
+    render(<Education />)
+    expect(screen.getByText(/bachelor of science/i)).toBeInTheDocument()
+    expect(screen.getByText(/computer science/i)).toBeInTheDocument()
+  })
+
+  it("renders coursework section", () => {
+    render(<Education />)
+    expect(screen.getByText(/relevant coursework/i)).toBeInTheDocument()
+  })
+})
+
+describe("Contact", () => {
+  it("renders a mailto link", () => {
+    render(<Contact />)
+    const emailLink = screen.getByRole("link", { name: /say hello/i })
+    expect(emailLink).toHaveAttribute("href", "mailto:allenlin2824@gmail.com")
+  })
+
+  it("renders GitHub and LinkedIn links", () => {
+    render(<Contact />)
+    expect(screen.getByRole("link", { name: /github/i })).toBeInTheDocument()
+    expect(screen.getByRole("link", { name: /linkedin/i })).toBeInTheDocument()
   })
 })
