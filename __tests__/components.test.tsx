@@ -3,6 +3,7 @@ import Hero from "@/components/Hero"
 import About from "@/components/About"
 import Experience from "@/components/Experience"
 import Projects from "@/components/Projects"
+import Skills from "@/components/Skills"
 
 describe("Hero", () => {
   it("renders name heading", () => {
@@ -62,5 +63,21 @@ describe("Projects", () => {
     render(<Projects />)
     expect(screen.getByText("React")).toBeInTheDocument()
     expect(screen.getByText("Python")).toBeInTheDocument()
+  })
+})
+
+describe("Skills", () => {
+  it("renders each skill category heading", () => {
+    render(<Skills />)
+    expect(screen.getByText("Languages")).toBeInTheDocument()
+    expect(screen.getByText("Frameworks")).toBeInTheDocument()
+    expect(screen.getByText("Tools")).toBeInTheDocument()
+  })
+
+  it("renders skill badges", () => {
+    render(<Skills />)
+    expect(screen.getByText("TypeScript")).toBeInTheDocument()
+    expect(screen.getByText("React")).toBeInTheDocument()
+    expect(screen.getByText("Git")).toBeInTheDocument()
   })
 })
