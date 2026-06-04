@@ -1,13 +1,6 @@
-export default function Education() {
-  const coursework = [
-    "Data Structures & Algorithms",
-    "Computer Systems",
-    "Machine Learning",
-    "Software Engineering",
-    "Databases",
-    "Operating Systems",
-  ]
+import { education } from "@/data/education"
 
+export default function Education() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-24">
       <h2 className="text-3xl font-bold text-slate-100 mb-12">
@@ -17,13 +10,11 @@ export default function Education() {
       <div className="bg-slate-800 rounded-lg p-8 border border-slate-700">
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-6">
           <div>
-            <h3 className="text-slate-100 font-bold text-xl mb-1">[Your University]</h3>
-            <p className="text-cyan-400 font-medium">
-              Bachelor of Science in Computer Science
-            </p>
+            <h3 className="text-slate-100 font-bold text-xl mb-1">{education.university}</h3>
+            <p className="text-cyan-400 font-medium">{education.degree}</p>
           </div>
           <span className="text-slate-500 font-mono text-sm mt-2 sm:mt-0">
-            Expected May 2027
+            {education.graduationYear}
           </span>
         </div>
         <div>
@@ -31,7 +22,7 @@ export default function Education() {
             Relevant Coursework
           </p>
           <div className="flex flex-wrap gap-2">
-            {coursework.map((course) => (
+            {education.coursework.map((course) => (
               <span
                 key={course}
                 className="text-slate-400 text-sm bg-slate-900 px-3 py-1 rounded border border-slate-700"
