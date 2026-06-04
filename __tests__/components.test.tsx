@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react"
 import Hero from "@/components/Hero"
 import About from "@/components/About"
+import Experience from "@/components/Experience"
 
 describe("Hero", () => {
   it("renders name heading", () => {
@@ -26,5 +27,18 @@ describe("About", () => {
     expect(screen.getByRole("link", { name: /github/i })).toBeInTheDocument()
     expect(screen.getByRole("link", { name: /linkedin/i })).toBeInTheDocument()
     expect(screen.getByRole("link", { name: /email/i })).toBeInTheDocument()
+  })
+})
+
+describe("Experience", () => {
+  it("renders a timeline entry for each experience", () => {
+    render(<Experience />)
+    expect(screen.getByText("Company Name")).toBeInTheDocument()
+  })
+
+  it("renders role and date range", () => {
+    render(<Experience />)
+    expect(screen.getByText("Software Engineering Intern")).toBeInTheDocument()
+    expect(screen.getByText("May 2025 – Aug 2025")).toBeInTheDocument()
   })
 })
