@@ -1,20 +1,26 @@
 export interface EducationEntry {
   university: string
   degree: string
+  gpa: string
   graduationYear: string
   coursework: string[]
 }
 
 export const education: EducationEntry = {
-  university: "[Your University]",
-  degree: "Bachelor of Science in Computer Science",
-  graduationYear: "Expected May 2027",
+  university: "West Virginia University",
+  degree: "Bachelor of Science in Computer Science — AI Emphasis & Statistics Minor",
+  gpa: "4.00 — President's List",
+  graduationYear: "Expected May 2028",
   coursework: [
+    "Applied Machine Learning",
     "Data Structures & Algorithms",
-    "Computer Systems",
-    "Machine Learning",
-    "Software Engineering",
-    "Databases",
-    "Operating Systems",
+    "Files & Data Structures",
+    "Probability & Statistics",
+    "Discrete Mathematics",
+    "Computer System Concepts",
+    "Intro to Software Engineering",
+    "Microprocessor Systems",
+    "Digital Logic Design",
+    "Calculus III",
   ],
 }

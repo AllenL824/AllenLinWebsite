@@ -8,22 +8,24 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    name: "Project One",
-    description: "A web app that does X. Built to solve Y problem.",
-    tech: ["React", "Node.js", "PostgreSQL"],
-    github: "https://github.com/username/project-one",
-    demo: "https://project-one.vercel.app",
+    name: "Alzheimer's Disease Prediction",
+    description:
+      "ML models predicting Alzheimer's disease status from ADNI blood biomarker data, achieving 86% accuracy with age-stratified cross-validation and biomarker importance analysis.",
+    tech: ["Python", "scikit-learn", "PyTorch", "NumPy", "pandas"],
+    github: "https://github.com/AllenL824/alzheimers-prediction",
   },
   {
-    name: "Project Two",
-    description: "A CLI tool for automating Z workflow.",
-    tech: ["Python", "Click"],
-    github: "https://github.com/username/project-two",
+    name: "BudgetFlow",
+    description:
+      "Full-stack financial tracking platform built at CMU TartanHacks with an AI advisor powered by Anthropic Claude, D3.js Sankey diagram visualizations, and real-time budget analytics.",
+    tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "D3.js"],
+    github: "https://github.com/AllenL824/budgetflow",
   },
   {
-    name: "Project Three",
-    description: "A machine learning model that classifies X with Y% accuracy.",
-    tech: ["PyTorch", "scikit-learn", "Jupyter"],
-    github: "https://github.com/username/project-three",
+    name: "Peak Planner",
+    description:
+      "Full-stack web app for planning and tracking hikes across U.S. state and national parks, featuring interactive maps, park APIs, user authentication, and wish lists.",
+    tech: ["React", "Node.js", "PostgreSQL", "REST APIs"],
+    github: "https://github.com/AllenL824/peak-planner",
   },
 ]

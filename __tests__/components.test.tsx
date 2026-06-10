@@ -37,22 +37,22 @@ describe("About", () => {
 describe("Experience", () => {
   it("renders a timeline entry for each experience", () => {
     render(<Experience />)
-    expect(screen.getByText("Company Name")).toBeInTheDocument()
+    expect(screen.getByText("WV Department of Transportation")).toBeInTheDocument()
   })
 
   it("renders role and date range", () => {
     render(<Experience />)
     expect(screen.getByText("Software Engineering Intern")).toBeInTheDocument()
-    expect(screen.getByText("May 2025 – Aug 2025")).toBeInTheDocument()
+    expect(screen.getByText("May 2025 – Aug. 2025")).toBeInTheDocument()
   })
 })
 
 describe("Projects", () => {
   it("renders a card for each project", () => {
     render(<Projects />)
-    expect(screen.getByText("Project One")).toBeInTheDocument()
-    expect(screen.getByText("Project Two")).toBeInTheDocument()
-    expect(screen.getByText("Project Three")).toBeInTheDocument()
+    expect(screen.getByText("Alzheimer's Disease Prediction")).toBeInTheDocument()
+    expect(screen.getByText("BudgetFlow")).toBeInTheDocument()
+    expect(screen.getByText("Peak Planner")).toBeInTheDocument()
   })
 
   it("renders GitHub links", () => {

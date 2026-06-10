@@ -12,6 +12,7 @@ export default function Education() {
           <div>
             <h3 className="text-slate-100 font-bold text-xl mb-1">{education.university}</h3>
             <p className="text-cyan-400 font-medium">{education.degree}</p>
+            <p className="text-slate-400 text-sm mt-1">GPA: {education.gpa}</p>
           </div>
           <span className="text-slate-500 font-mono text-sm mt-2 sm:mt-0">
             {education.graduationYear}

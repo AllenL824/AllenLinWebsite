@@ -11,17 +11,21 @@ export default function About() {
       <div className="flex flex-col md:flex-row gap-12 items-start">
         <div className="flex-1">
           <p className="text-slate-400 text-lg leading-relaxed mb-4">
-            Hi! I&apos;m Allen, a Computer Science student at [Your University] passionate about
-            building software that makes a difference. I love working on full-stack projects and
-            exploring machine learning.
+            Hi! I&apos;m Allen, a Computer Science student at West Virginia University pursuing a
+            B.S. in CS with an emphasis in Artificial Intelligence and a minor in Statistics. I
+            maintain a 4.0 GPA and am passionate about building things at the intersection of
+            machine learning research and full-stack software engineering.
           </p>
           <p className="text-slate-400 leading-relaxed mb-8">
-            When I&apos;m not coding, you can find me [your hobbies]. I&apos;m currently looking
-            for internship opportunities for [semester/year].
+            I currently do research at WVU&apos;s Machine Intelligence Lab, studying sycophantic
+            behavior in large language models. I&apos;ve also interned as a software engineer at
+            the WV Department of Transportation, modernizing legacy ASP.NET infrastructure, and
+            worked as a lab technician at WVU&apos;s IDEMIA Biometrics Lab. I&apos;m actively
+            looking for summer 2026 internship and research opportunities.
           </p>
           <div className="flex gap-4">
             <a
-              href="https://github.com/username"
+              href="https://github.com/AllenL824"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-400 hover:text-cyan-400 transition-colors"
@@ -30,7 +34,7 @@ export default function About() {
               <Github size={22} />
             </a>
             <a
-              href="https://linkedin.com/in/username"
+              href="https://www.linkedin.com/in/allenl824"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-400 hover:text-cyan-400 transition-colors"

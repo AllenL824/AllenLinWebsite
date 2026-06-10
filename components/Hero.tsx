@@ -9,7 +9,7 @@ export default function Hero() {
           Allen Lin
         </h1>
         <h3 className="text-2xl md:text-3xl text-slate-400 mb-6">
-          Computer Science Student @ [Your School]
+          Computer Science Student @ West Virginia University
         </h3>
         <p className="text-slate-500 text-lg max-w-xl mx-auto mb-10">
           I build things for the web and love solving interesting problems.
